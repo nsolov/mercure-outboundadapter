@@ -1,0 +1,11 @@
+ do $SYSTEM.OBJ.Load("/irisdev/app/Installer.cls", "ck")
+ set sc = ##class(App.Installer).setup()
+
+ zn "USER"
+ do $System.OBJ.LoadDir("/irisdev/app/src","ck","*.cls",1)
+
+ zn "%SYS"
+ zpm "install passwordless"
+ Do ##class(Security.Users).UnExpireUserPasswords("*")
+
+halt

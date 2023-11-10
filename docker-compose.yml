@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+
+    iris:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: --check-caps false
+        ports:
+            - 1972
+            - 52783:52773
+            - 53773
+        volumes:
+            - ./:/irisdev/app
+
+    mercure:
+        image: dunglas/mercure
+        environment:
+            DEBUG: "debug"
+            SERVER_NAME: ':9000'
+            MERCURE_PUBLISHER_JWT_KEY: 'my-256-bit-secret'
+            MERCURE_SUBSCRIBER_JWT_KEY: 'my-256-bit-secret'
+            MERCURE_EXTRA_DIRECTIVES: |-
+              cors_origins "*"
+              anonymous
+        ports:
+            - "9000:9000"

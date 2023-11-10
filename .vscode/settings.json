@@ -1,0 +1,7 @@
+{
+    "objectscript.conn": {
+        "server": "tg-adapter",
+        "ns": "USER",
+        "active": true
+    }
+}
