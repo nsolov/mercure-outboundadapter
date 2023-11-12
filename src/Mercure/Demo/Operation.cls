@@ -7,7 +7,7 @@ Parameter INVOCATION = "Queue";
 
 Method SampleCall(pRequest As Ens.StringContainer, Output pResponse As Ens.Response) As %Status
 {
-    Return ..Adapter.Publish($LB("https://aaa.com/a2"), pRequest.StringValue)
+    Return ..Adapter.Publish($LB("https://mydomain.com/test1"), pRequest.StringValue)
 }
 
 XData MessageMap
