@@ -58,10 +58,10 @@ docker compose up -d
 4. Interoperability settings
 Open Mercure.Demo.Production
 For Mercure.Demo.Operation specify the following settings:
-* Server: mercure-outboundadapter-mercure-1 (Mercure Hub server)
-* Port: 9000 (this port is specified for Mercure in docker-compose.yml)
-* Path: /.well-known/mercure (Mercure endpoint)
-* Token: Place generated JWT token here
+* Server: `mercure-outboundadapter-mercure-1` (Mercure Hub server)
+* Port: `9000` (this port is specified for Mercure in docker-compose.yml)
+* Path: `/.well-known/mercure` (Mercure endpoint)
+* Token: *Place generated JWT token here*
 
 Run Mercure.Demo.Production production
 
